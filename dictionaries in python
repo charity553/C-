@@ -1,0 +1,43 @@
+# problem :CourseInfo
+# declaring dictionary for room
+room = {}
+
+room["CS101"] = "3004"
+room["CS102"] = "4501"
+room["CS103"] = "6755"
+room["NT110"] = "1244"
+room["CM241"] = "1411"
+
+instructor = {}
+
+instructor["CS101"] = "Haynes"
+instructor["CS102"] = "Alvarado"
+instructor["CS103"] = "Rich"
+instructor["NT110"] = "Burkes"
+instructor["CM241"] = "Lee"
+
+time = {}
+
+time["CS101"] = "8:00 a.m."
+time["CS102"] = "9:00 a.m."
+time["CS103"] = "10:00 a.m."
+time["NT110"] = "11:00 a.m."
+time["CM241"] = "1:00 p.m."
+
+def CourseInfo():
+    #print(f'College Course Locater Program')
+    print(f'Enter a course number below to get information')
+    
+
+CourseInfo()
+get_course = input(f'Enter course number here: ')
+
+
+
+if get_course in room and get_course in instructor and get_course in time:
+    print(f'The details for course {get_course} are: ')
+    print(f'Room: {room[get_course]}')
+    print(f'Instructor: {instructor[get_course]}')
+    print(f'Time: {time[get_course]}')
+else:
+    print(f'{get_course} is an invalid course number.')
